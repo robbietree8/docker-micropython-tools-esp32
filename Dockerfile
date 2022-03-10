@@ -12,10 +12,8 @@ RUN pip3 install -I pyparsing==2.3.1
 RUN pip3 install pyserial
 RUN pip3 install rshell
 
-RUN cd /root && git clone --recursive https://github.com/espressif/esp-idf.git
+RUN cd /root && git clone -b v4.3.1 --recursive https://github.com/espressif/esp-idf.git
 WORKDIR /root/esp-idf
-RUN git checkout 4c81978a3e2220674a432a588292a4c860eef27b
-RUN git submodule update --init --recursive
 RUN ./install.sh
 
 ENV ESPIDF=/root/esp-idf
