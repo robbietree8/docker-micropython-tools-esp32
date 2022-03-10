@@ -37,6 +37,8 @@ make BOARD=GENERIC_C3
 ls /root/micropython/ports/esp32/build-GENERIC_C3/firmware.bin
 ```
 
+![build-success](https://raw.githubusercontent.com/unseel/docker-micropython-tools-esp32/master/build-success.png)
+
 6. upload to board
 
 ```sh
