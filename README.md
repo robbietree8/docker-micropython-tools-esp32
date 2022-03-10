@@ -3,7 +3,7 @@
 
 ## Steps
 
-1. 
+1. Run the docker container
 
 ```sh
 docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/esp32-build-docker:v0.0.1
