@@ -6,7 +6,7 @@
 1. Run the docker container
 
 ```sh
-docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/esp32-build-docker:v0.0.1
+docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/esp32-build-docker:0.0.1
 ```
 
 2. Activating idf env
@@ -28,6 +28,7 @@ CROSS_COMPILE='' make
 ```sh
 cd /root/micropython/ports/esp32
 make submodule
+make BOARD=GENERIC_C3 clean # clean if build before
 make BOARD=GENERIC_C3
 ```
 
