@@ -27,7 +27,7 @@ CROSS_COMPILE='' make
 
 ```sh
 cd /root/micropython/ports/esp32
-make submodule
+make submodules
 make BOARD=GENERIC_C3 clean # clean if build before
 make BOARD=GENERIC_C3
 ```
