@@ -15,6 +15,7 @@ RUN pip3 install rshell
 RUN cd /root && git clone -b v4.3.1 --recursive https://github.com/espressif/esp-idf.git
 WORKDIR /root/esp-idf
 RUN ./install.sh
+RUN echo 'source /root/esp-idf/export.sh' >> /root/.bashrc
 
 ENV ESPIDF=/root/esp-idf
 ENV CROSS_COMPILE=/root/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-
