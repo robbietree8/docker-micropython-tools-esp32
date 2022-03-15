@@ -6,7 +6,7 @@
 1. Run the docker container
 
 ```sh
-docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/esp32-build-docker:0.0.1
+docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/esp32-build-docker:0.0.3
 ```
 
 2. build MicroPython
