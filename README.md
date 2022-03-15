@@ -1,4 +1,4 @@
-# Build your own micropython firmware using docker
+# Build your own MicroPython firmware using docker
 
 
 ## Steps
@@ -9,23 +9,14 @@
 docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/esp32-build-docker:0.0.1
 ```
 
-2. build mpy-cross
+2. build MicroPython
 
 ```sh
-cd /root/micropython/mpy-cross
-CROSS_COMPILE='' make
+cd /root
+sh build-esp32.sh
 ```
 
-3. build micropython
-
-```sh
-cd /root/micropython/ports/esp32
-make submodules
-make BOARD=GENERIC_C3 clean # clean if built before
-make BOARD=GENERIC_C3
-```
-
-4. find the combined firmware bin
+3. find the combined firmware bin
 
 ```sh
 ls /root/micropython/ports/esp32/build-GENERIC_C3/firmware.bin
@@ -33,7 +24,7 @@ ls /root/micropython/ports/esp32/build-GENERIC_C3/firmware.bin
 
 ![build-success](https://raw.githubusercontent.com/unseel/docker-micropython-tools-esp32/master/build-success.png)
 
-5. upload to board
+4. upload to board
 
 ```sh
 esptool.py \
@@ -43,7 +34,7 @@ esptool.py \
     write_flash --flash_size=detect -fm dio 0 firmware.bin
 ```
 
-6. test board
+5. test board
 
 ## Others
 

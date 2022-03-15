@@ -21,5 +21,6 @@ ENV ESPIDF=/root/esp-idf
 ENV CROSS_COMPILE=/root/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-
 ENV PORT=/dev/ttyESP
 
+COPY build-esp32.sh /root
 WORKDIR /root
 
