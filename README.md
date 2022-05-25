@@ -13,7 +13,7 @@ docker run -it --rm -v {your micropython repo dir}:/root/micropython robbietree/
 
 ```sh
 cd /root
-sh build-esp32.sh
+sh clean-build-esp32.sh
 ```
 
 3. find the combined firmware bin
